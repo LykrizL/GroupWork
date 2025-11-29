@@ -8,8 +8,6 @@ namespace WorkLibrary // Название пространства
 {
     public class Users : People // Название класса
     {
-        private string _userLogin;
-        private string _userPassword;
         public Users(string Login, string FullName, string Email, string Phone,  string Password):base(FullName, Phone, Email)
         {
             _userLogin = Login;
