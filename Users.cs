@@ -84,24 +84,6 @@ namespace WorkLibrary // Название пространства
                 writer.WriteLine(GetInfo());
             }
         }
-        public static void IsReadFile(List<Users> data, string fileName)
-        {
-            string[] lines = File.ReadAllLines(fileName, Encoding.UTF8);
-            foreach (string line in lines)
-            {
-                string[] parts = line.Split(',');
-
-                if (parts.Length == 5) // Ожидаем 5 частей (логин, ФИО, email, телефон, пароль)
-                {
-                    string userLogin = parts[0]; // Извлекаем логин
-                    string userFullName = parts[1]; // Извлекаем ФИО
-                    string userEmail = parts[2]; // Извлекаем email
-                    string userPhone = parts[3]; // Извлекаем телефон
-                    string userPassword = parts[4]; // Извлекаем пароль
-
-                    data.Add(new Users(userLogin, userFullName, userEmail, userPhone, userPassword));
-                }
-            }
-        }
+  
     }
 }
