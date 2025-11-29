@@ -69,13 +69,7 @@ namespace WorkLibrary
         {
             return ($"{UserLogin},{FullName},{Email},{Phone},{UserPassword}");
         }
-        public void IsFileWrite(string filePath)
-        {
-            using (StreamWriter writer = new StreamWriter(filePath, true)) // true для добавления
-            {
-                writer.WriteLine(GetInfo());
-            }
-        }
+
         public void IsFileWriteOnce(string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath, false))
