@@ -61,11 +61,6 @@ namespace WorkLibrary // Название пространства
             string fullNamePattern = @"^([А-ЯЁ][а-яё]+)\s([А-ЯЁ][а-яё]+)\s([А-ЯЁ][а-яё]+)$";
             return Regex.IsMatch(fullName, fullNamePattern);
         }
-        public bool IsValidLogin(string Login)
-        {
-            string loginPattern = @"^[a-zA-Z][a-zA-Z0-9]{6,}$";
-            return Regex.IsMatch(Login, loginPattern);
-        }
         public override string GetInfo()
         {
             return ($"{UserLogin},{FullName},{Email},{Phone},{UserPassword}");
